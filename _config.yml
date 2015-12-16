@@ -1,0 +1,17 @@
+# Site settings
+title: Trumplings
+description: "​Donald trump's face on dumplings"
+
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+baseurl: /
+
+gems:
+  - octopress-autoprefixer
