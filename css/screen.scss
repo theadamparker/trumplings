@@ -2,6 +2,7 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
+@import "reset.scss";
 @import "colors.scss";
 @import "fonts.scss";
 
@@ -18,6 +19,7 @@ h1.title {
 	letter-spacing: -.1rem;
 	text-align: center;
 	color: $orange;
+	margin: 4rem auto 0;
 }
 
 .steamwrap {
@@ -37,7 +39,7 @@ h1.title {
 
 .steamer {
 	position: relative;
-	margin: 5rem auto 0;
+	margin: 3rem auto 0;
 	display: block;
 	width: 100%;
 }
@@ -80,5 +82,12 @@ h1.title {
 		z-index: 9;
 		width: 15rem;
 	}
+}
+
+.chopsticks {
+	position: absolute;
+	right: 5rem;
+	top: 26rem;
+	z-index: 11;
 }
 
