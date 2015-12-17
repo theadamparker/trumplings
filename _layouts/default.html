@@ -1,16 +1,12 @@
-<!doctype html>
-<html class="no-js" lang="">
-    {% include head.html %}
-    <body>
-      <h1 class="title">Trumplings.</h1>
-      <div class="steamwrap">
-        <img id="uno" class="trumpling" src="{{ site.baseurl }}/img/dumpling.png" />
-        <img id="dos" class="trumpling" src="{{ site.baseurl }}/img/dumpling.png" />
-        <img class="steamer" src="{{ site.baseurl }}/img/dumplingsteamer.png" />
-      </div>
-
-      <div id="viewport"></div>
-      <script src="{{ site.baseurl }}/js/steam.js"></script>
-      <script src="{{ site.baseurl }}/js/ga.js"></script>
-    </body>
-</html>
+{% include head.html %}
+  <h1 class="title">Trumplings.</h1>
+  <div class="steamwrap">
+    <img id="uno" class="trumpling" src="{{ site.baseurl }}/img/dumpling.png" />
+    <img id="dos" class="trumpling" src="{{ site.baseurl }}/img/dumpling.png" />
+    <img id="tres" class="trumpling" src="{{ site.baseurl }}/img/dumpling.png" />
+    <img id="cuatro" class="trumpling" src="{{ site.baseurl }}/img/dumpling.png" />
+    <img id="cinco" class="trumpling" src="{{ site.baseurl }}/img/dumpling.png" />
+    <img class="steamer" src="{{ site.baseurl }}/img/dumplingsteamer.png" />
+  </div>
+{% include js.html %}
+{% include footer.html %}

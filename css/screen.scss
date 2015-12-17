@@ -7,8 +7,9 @@
 
 
 body {
-	background: $orange;
+	background: #fff;;
 	font-family: $helvetica;
+	background: $lightgrey;
 	
 }
 
@@ -16,7 +17,7 @@ h1.title {
 	font-size: 6rem;
 	letter-spacing: -.1rem;
 	text-align: center;
-	color: #fff;
+	color: $orange;
 }
 
 .steamwrap {
@@ -36,7 +37,7 @@ h1.title {
 
 .steamer {
 	position: relative;
-	margin: 10vh auto;
+	margin: 5rem auto 0;
 	display: block;
 	width: 100%;
 }
@@ -48,13 +49,36 @@ h1.title {
 	
 
 	&#uno {
-		left: 11rem;
-		margin-top: 14rem;
+		left: 9rem;
+		margin-top: 16rem;
+		z-index: 10
 	}
 
 	&#dos {
-		left: 20rem;
-		margin-top: 12rem;
+		left: 16rem;
+		margin-top: 7rem;
+		z-index: 8
+	}
+
+	&#tres {
+		left: 23rem;
+		margin-top: 19rem;
+		z-index: 10;
+		width: 15rem;
+	}
+
+	&#cuatro {
+		left: 30rem;
+		margin-top: 6rem;
+		z-index: 8;
+		width: 13rem;
+	}
+
+	&#cinco {
+		left: 37rem;
+		margin-top: 13rem;
+		z-index: 9;
+		width: 15rem;
 	}
 }
 
