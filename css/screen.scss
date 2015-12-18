@@ -45,6 +45,14 @@ h1.title {
 	margin: 3rem auto 0;
 	display: block;
 	width: 100%;
+
+	// this is for the animation
+	left: -100rem;
+
+	// if no js, then keep the trumplings where they belong
+	.no-js & {
+		left: 0;
+	}
 }
 
 .trumpling {
@@ -98,8 +106,9 @@ h1.title {
 
 .chopsticks {
 	position: absolute;
-	right: 5rem;
-	top: 26rem;
+	right: 0rem;
+	top: 7rem;
+	margin-right: -17rem;
 	z-index: 11;
 
 	@include breakpoint(baby-bear) {
