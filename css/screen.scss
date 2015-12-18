@@ -4,6 +4,7 @@
 
 @import "reset.scss";
 @import "colors.scss";
+@import "mixins.scss";
 @import "fonts.scss";
 
 
@@ -26,6 +27,8 @@ h1.title {
 	width: 58rem;
 	margin: 0 auto;
 	position: relative;
+	left: 50%;
+	margin-left: -29rem;
 
 	.smoke {
 		position: absolute;
@@ -48,6 +51,15 @@ h1.title {
 	position: absolute;
 	z-index: 5;
 	width: 14rem;
+
+
+	// this is for the animation
+	top: -62rem;
+
+	// if no js, then keep the trumplings where they belong
+	.no-js & {
+		top: 0;
+	}
 	
 
 	&#uno {
@@ -89,5 +101,9 @@ h1.title {
 	right: 5rem;
 	top: 26rem;
 	z-index: 11;
+
+	@include breakpoint(baby-bear) {
+		display: none;
+	}
 }
 
