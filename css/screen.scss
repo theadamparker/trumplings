@@ -114,9 +114,5 @@ h1.title {
 	right: 0rem;
 	top: 20rem;
 	z-index: -1;
-
-	@include breakpoint(baby-bear) {
-		display: none;
-	}
 }
 
