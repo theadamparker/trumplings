@@ -34,7 +34,3 @@ $( document ).ready(function() {
 	    doBounce($(this), 2, '10px', 100);
 	});
 });
-
-
-
-
