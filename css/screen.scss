@@ -10,9 +10,15 @@
 
 body {
 	background: #fff;;
-	font-family: $helvetica;
+	font-family: $helveticabold;
 	background: $lightgrey;
 	
+}
+
+p {
+	font-family: $helvetica;
+	font-weight: 500;
+	margin-bottom: 2rem;
 }
 
 .wrapper {
@@ -116,7 +122,7 @@ h1.title {
 	z-index: -1;
 }
 
-.fb-like {
+.fb-like, p {
 	margin-top: 2rem;
 	margin-left: 2rem;
 }
