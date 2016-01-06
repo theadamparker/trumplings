@@ -73,7 +73,7 @@ h1.title {
 
 
 	// this is for the animation
-	top: -62rem;
+	// top: -62rem;
 
 	// if no js, then keep the trumplings where they belong
 	.no-js & {
@@ -130,5 +130,10 @@ h1.title {
 .ad {
 	margin: 2rem auto 0;
 	width: 768px;
+}
+
+#addtrumpling {
+	position: relative;
+	z-index: 10;
 }
 
