@@ -70,15 +70,7 @@ h1.title {
 	position: absolute;
 	z-index: 5;
 	width: 14rem;
-
-
-	// this is for the animation
-	// top: -62rem;
-
-	// if no js, then keep the trumplings where they belong
-	.no-js & {
-		top: 0;
-	}
+	top: 0;
 	
 	&#uno {
 		left: 9rem;
@@ -132,8 +124,11 @@ h1.title {
 	width: 768px;
 }
 
-#addtrumpling {
-	position: relative;
+#addtrumpling img {
+	position: absolute;
 	z-index: 10;
+	top: 2rem;
+	right: 2rem;
+	width: 5rem;
 }
 
