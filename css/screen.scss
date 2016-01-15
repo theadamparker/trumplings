@@ -20,6 +20,10 @@ body {
 	
 }
 
+img {
+	max-width: 100%;
+}
+
 p {
 	font-family: $helvetica;
 	font-weight: 500;
@@ -29,6 +33,7 @@ p {
 .wrapper {
 	width: 100%;
 	height: 100%;
+	max-height: 100%;
 	margin: 0 auto;
 	position: relative;
 }
@@ -39,6 +44,12 @@ h1.title {
 	text-align: center;
 	color: $orange;
 	margin: 1rem auto 0;
+}
+
+.slogan {
+	margin: 0 auto;
+	width: 40rem;
+	display: block;
 }
 
 .steamwrap {
@@ -60,37 +71,31 @@ h1.title {
 	z-index: 5;
 	width: 14rem;
 	top: 0;
+
+	@include breakpoint(baby-bear) {
+		width: 6rem;
+	}
 	
 	&#uno {
 		left: 9rem;
-		margin-top: 16rem;
-		z-index: 10
 	}
 
 	&#dos {
 		left: 16rem;
-		margin-top: 7rem;
-		z-index: 8
 	}
 
 	&#tres {
 		left: 23rem;
-		margin-top: 19rem;
-		z-index: 10;
 		width: 15rem;
 	}
 
 	&#cuatro {
 		left: 30rem;
-		margin-top: 6rem;
-		z-index: 8;
 		width: 13rem;
 	}
 
 	&#cinco {
 		left: 37rem;
-		margin-top: 13rem;
-		z-index: 9;
 		width: 15rem;
 	}
 
@@ -103,7 +108,13 @@ h1.title {
 	z-index: -1;
 }
 
-.fb-like, p {
+.fb-like, {
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
+}
+
+p {
 	margin-top: 2rem;
 	margin-left: 2rem;
 }
