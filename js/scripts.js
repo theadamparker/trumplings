@@ -1,12 +1,5 @@
 $( document ).ready(function() {
 
-    $('.steamer').animate({
-		left: "0%"
-	}, {
-		duration: 1000,
-		easing: "easeOutCubic"
-	});
-
 	// delay for a moment
     setTimeout(introduceTrumplings, 1500);
 
@@ -16,6 +9,7 @@ $( document ).ready(function() {
 		var randomRotation = Math.floor((-45) + (1+45-(-45))*Math.random()) + "deg" ;
 
 		$(".trumpling").box2d({'y-velocity':10});
+		//$(".chopsticks").box2d({'y-velocity':10});
 
 		$("#addtrumpling").click(function() {
 			$('<img class="trumpling" src="/img/trumpling.png" alt="trumpling" />')

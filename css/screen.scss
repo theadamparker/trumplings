@@ -7,11 +7,16 @@
 @import "mixins.scss";
 @import "fonts.scss";
 
+html {
+	height: 100%;
+}
+
 
 body {
 	background: #fff;;
 	font-family: $helveticabold;
 	background: $lightgrey;
+	height: 100%;
 	
 }
 
@@ -23,7 +28,7 @@ p {
 
 .wrapper {
 	width: 100%;
-	min-width: 1350px;
+	height: 100%;
 	margin: 0 auto;
 	position: relative;
 }
@@ -37,7 +42,6 @@ h1.title {
 }
 
 .steamwrap {
-	width: 58rem;
 	margin: 0 auto;
 	position: relative;
 
@@ -48,21 +52,6 @@ h1.title {
 		background:url('../img/smoke-texture.png') no-repeat;
 		bottom: 150px;
 		margin-left: 0px;
-	}
-}
-
-.steamer {
-	position: relative;
-	margin: 3rem auto 0;
-	display: block;
-	width: 100%;
-
-	// this is for the animation
-	left: -100rem;
-
-	// if no js, then keep the trumplings where they belong
-	.no-js & {
-		left: 0;
 	}
 }
 
@@ -130,5 +119,9 @@ h1.title {
 	top: 2rem;
 	right: 2rem;
 	width: 5rem;
+}
+
+.clearfix {
+	clear: both;
 }
 
