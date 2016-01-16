@@ -41,6 +41,14 @@ $( document ).ready(function() {
 		$(".trumpling").hide( "puff" , function() {
 			$(this).remove();
 		});
+
+		var outtahere = document.getElementById("outtahere");
+		outtahere.play();
+	});
+
+	$("#playsound").click(function() {
+		var audio = document.getElementsByTagName("audio")[0];
+		audio.play();
 	});
 	
 });
