@@ -88,6 +88,10 @@ h1.title {
 	width: 14rem;
 	top: 0;
 
+	& video {
+		height: 14rem;
+	}
+
 	@include breakpoint(baby-bear) {
 		width: 6rem;
 	}
