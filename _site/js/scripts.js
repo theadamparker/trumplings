@@ -7,16 +7,6 @@ $( document ).ready(function() {
 
     function introduceTrumplings() {
 
-  //   	var trumpling = new b2CircleDef();
-		// trumpling.density = 1.0;
-		// trumpling.radius = 20;
-		// trumpling.restitution = 1.0;
-		// trumpling.friction = 0;
-		// var circleBd = new b2BodyDef();
-		// circleBd.AddShape(trumpling);
-		// circleBd.position.Set(x,y);
-		// var circleBody = world.CreateBody(circleBd);
-
 		$(".trumpling").box2d({'y-velocity':10 , 'shape':'circle'});
 
 		$("#addtrumpling").click(function() {
@@ -53,5 +43,16 @@ $( document ).ready(function() {
 		// 	$(".trumpling").remove();
 		// });
 	});
-	
+
+
+	function doBounce(element, times, distance, speed) {
+	    for(var i = 0; i < times; i++) {
+	        element.animate({marginTop: '-='+distance}, speed)
+	            .animate({marginTop: '+='+distance}, speed);
+	    }        
+	}	
+
+	$(".trumpling").click(function(){
+	    doBounce($(this), 2, '10px', 100);
+	});
 });
