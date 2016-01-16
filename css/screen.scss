@@ -17,6 +17,10 @@ body {
 	font-family: $helveticabold;
 	background: $lightgrey;
 	height: 100%;
+
+	@include breakpoint(baby-bear) {
+		overflow: hidden;
+	}
 	
 }
 
@@ -59,6 +63,10 @@ h1.title {
 	max-height: 100%;
 	width: 100%;
 	top: 0;
+
+	@include breakpoint(baby-bear) {
+		overflow: hidden;
+	}
 
 	.smoke {
 		position: absolute;
