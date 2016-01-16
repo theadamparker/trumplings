@@ -37,22 +37,6 @@ $( document ).ready(function() {
 		$(".trumpling").hide( "puff" , function() {
 			$(this).remove();
 		});
-
-		// $(".trumpling").hide("puff", {}, 1000, function() {
-		// 	// $(this).remove();
-		// 	$(".trumpling").remove();
-		// });
 	});
-
-
-	function doBounce(element, times, distance, speed) {
-	    for(var i = 0; i < times; i++) {
-	        element.animate({marginTop: '-='+distance}, speed)
-	            .animate({marginTop: '+='+distance}, speed);
-	    }        
-	}	
-
-	$(".trumpling").click(function(){
-	    doBounce($(this), 2, '10px', 100);
-	});
+	
 });
