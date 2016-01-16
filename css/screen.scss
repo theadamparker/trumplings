@@ -40,6 +40,10 @@ p {
 	max-height: 100%;
 	margin: 0 auto;
 	position: relative;
+
+	@include breakpoint(baby-bear) {
+		overflow: hidden;
+	}
 }
 
 h1.title {

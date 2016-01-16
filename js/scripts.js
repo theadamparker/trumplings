@@ -13,7 +13,7 @@ $( document ).ready(function() {
 
 			if (babybear.matches) {
 				// window width is less than 500px
-				var randomMargin = Math.floor(95 + (1-5-95)*Math.random()) + "%" ;
+				var randomMargin = Math.floor(90 + (1-5-90)*Math.random()) + "%" ;
 				var randomWidth = Math.floor(8 + (1+5-8)*Math.random()) + "rem" ;
 				var randomRotation = Math.floor((-45) + (1+45-(-45))*Math.random()) + "deg" ;
 
