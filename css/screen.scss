@@ -7,12 +7,21 @@
 @import "mixins.scss";
 @import "fonts.scss";
 
+html {
+	height: 100%;
+}
+
 
 body {
 	background: #fff;;
 	font-family: $helveticabold;
 	background: $lightgrey;
+	height: 100%;
 	
+}
+
+img {
+	max-width: 100%;
 }
 
 p {
@@ -23,7 +32,8 @@ p {
 
 .wrapper {
 	width: 100%;
-	min-width: 1350px;
+	height: 100%;
+	max-height: 100%;
 	margin: 0 auto;
 	position: relative;
 }
@@ -36,10 +46,19 @@ h1.title {
 	margin: 1rem auto 0;
 }
 
-.steamwrap {
-	width: 58rem;
+.slogan {
 	margin: 0 auto;
-	position: relative;
+	width: 40rem;
+	display: block;
+}
+
+.steamwrap {
+	margin: 0 auto;
+	position: absolute;
+	height: 100%;
+	max-height: 100%;
+	width: 100%;
+	top: 0;
 
 	.smoke {
 		position: absolute;
@@ -51,66 +70,60 @@ h1.title {
 	}
 }
 
-.steamer {
-	position: relative;
-	margin: 3rem auto 0;
-	display: block;
-	width: 100%;
-
-	// this is for the animation
-	left: -100rem;
-
-	// if no js, then keep the trumplings where they belong
-	.no-js & {
-		left: 0;
-	}
-}
-
 .trumpling {
 	position: absolute;
 	z-index: 5;
 	width: 14rem;
+	top: 0;
 
-
-	// this is for the animation
-	top: -62rem;
-
-	// if no js, then keep the trumplings where they belong
-	.no-js & {
-		top: 0;
+	@include breakpoint(baby-bear) {
+		width: 6rem;
 	}
 	
 	&#uno {
 		left: 9rem;
-		margin-top: 16rem;
-		z-index: 10
+
+		@include breakpoint(baby-bear) {
+			left: 5%;
+		}
 	}
 
 	&#dos {
 		left: 16rem;
-		margin-top: 7rem;
-		z-index: 8
+
+		@include breakpoint(baby-bear) {
+			left: 5%;
+		}
 	}
 
 	&#tres {
 		left: 23rem;
-		margin-top: 19rem;
-		z-index: 10;
 		width: 15rem;
+
+		@include breakpoint(baby-bear) {
+			left: 10%;
+			width: 5rem;
+		}
 	}
 
 	&#cuatro {
 		left: 30rem;
-		margin-top: 6rem;
-		z-index: 8;
 		width: 13rem;
+
+		@include breakpoint(baby-bear) {
+			left: 15%;
+			width: 8rem;
+		}
 	}
 
 	&#cinco {
 		left: 37rem;
-		margin-top: 13rem;
-		z-index: 9;
 		width: 15rem;
+
+		@include breakpoint(baby-bear) {
+			left: 3%;
+			width: 7rem;
+		}
 	}
 
 }
@@ -122,7 +135,17 @@ h1.title {
 	z-index: -1;
 }
 
-.fb-like, p {
+.fb-like, {
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
+
+	@include breakpoint(baby-bear) {
+		display: none !important;
+	}
+}
+
+p {
 	margin-top: 2rem;
 	margin-left: 2rem;
 }
@@ -130,5 +153,44 @@ h1.title {
 .ad {
 	margin: 2rem auto 0;
 	width: 768px;
+}
+
+.controls {
+	position: absolute;
+	z-index: 10;
+	top: 2rem;
+	right: 2rem;
+
+	@include breakpoint(baby-bear) {
+		bottom: 1rem;
+	}
+
+	img {
+		width: 5rem;
+		float: right;
+		clear: right;
+		margin-bottom: 1rem;
+		transition: .2s all ease;
+
+		@include breakpoint(baby-bear) {
+			width: 3rem;
+		}
+
+		&:hover {
+			opacity: .7;
+		}
+
+		&:active {
+			width: 5.2rem;
+
+			@include breakpoint(baby-bear) {
+				width: 3.2rem;
+			}
+		}
+	}
+}
+
+.clearfix {
+	clear: both;
 }
 
