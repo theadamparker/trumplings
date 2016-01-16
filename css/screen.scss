@@ -171,6 +171,7 @@ p {
 
 	@include breakpoint(baby-bear) {
 		bottom: 1rem;
+		top: initial;
 	}
 
 	img {
