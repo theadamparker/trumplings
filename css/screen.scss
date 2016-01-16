@@ -54,7 +54,11 @@ h1.title {
 
 .steamwrap {
 	margin: 0 auto;
-	position: relative;
+	position: absolute;
+	height: 100%;
+	max-height: 100%;
+	width: 100%;
+	top: 0;
 
 	.smoke {
 		position: absolute;
@@ -78,25 +82,48 @@ h1.title {
 	
 	&#uno {
 		left: 9rem;
+
+		@include breakpoint(baby-bear) {
+			left: 5%;
+		}
 	}
 
 	&#dos {
 		left: 16rem;
+
+		@include breakpoint(baby-bear) {
+			left: 5%;
+		}
 	}
 
 	&#tres {
 		left: 23rem;
 		width: 15rem;
+
+		@include breakpoint(baby-bear) {
+			left: 10%;
+			width: 5rem;
+		}
 	}
 
 	&#cuatro {
 		left: 30rem;
 		width: 13rem;
+
+		@include breakpoint(baby-bear) {
+			left: 15%;
+			width: 8rem;
+		}
 	}
 
 	&#cinco {
 		left: 37rem;
 		width: 15rem;
+
+		@include breakpoint(baby-bear) {
+			left: 3%;
+			width: 7rem;
+		}
 	}
 
 }
@@ -112,6 +139,10 @@ h1.title {
 	position: absolute;
 	top: 2rem;
 	left: 2rem;
+
+	@include breakpoint(baby-bear) {
+		display: none !important;
+	}
 }
 
 p {
@@ -124,12 +155,39 @@ p {
 	width: 768px;
 }
 
-#addtrumpling img {
+.controls {
 	position: absolute;
 	z-index: 10;
 	top: 2rem;
 	right: 2rem;
-	width: 5rem;
+
+	@include breakpoint(baby-bear) {
+		bottom: 1rem;
+	}
+
+	img {
+		width: 5rem;
+		float: right;
+		clear: right;
+		margin-bottom: 1rem;
+		transition: .2s all ease;
+
+		@include breakpoint(baby-bear) {
+			width: 3rem;
+		}
+
+		&:hover {
+			opacity: .7;
+		}
+
+		&:active {
+			width: 5.2rem;
+
+			@include breakpoint(baby-bear) {
+				width: 3.2rem;
+			}
+		}
+	}
 }
 
 .clearfix {

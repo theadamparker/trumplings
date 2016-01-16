@@ -7,7 +7,17 @@ $( document ).ready(function() {
 
     function introduceTrumplings() {
 
-		$(".trumpling").box2d({'y-velocity':10});
+  //   	var trumpling = new b2CircleDef();
+		// trumpling.density = 1.0;
+		// trumpling.radius = 20;
+		// trumpling.restitution = 1.0;
+		// trumpling.friction = 0;
+		// var circleBd = new b2BodyDef();
+		// circleBd.AddShape(trumpling);
+		// circleBd.position.Set(x,y);
+		// var circleBody = world.CreateBody(circleBd);
+
+		$(".trumpling").box2d({'y-velocity':10 , 'shape':'circle'});
 
 		$("#addtrumpling").click(function() {
 
@@ -31,5 +41,17 @@ $( document ).ready(function() {
 			.box2d({'y-velocity':10});
 		});
 	}
+
+	$("#delete").click(function() {
+
+		$(".trumpling").hide( "puff" , function() {
+			$(this).remove();
+		});
+
+		// $(".trumpling").hide("puff", {}, 1000, function() {
+		// 	// $(this).remove();
+		// 	$(".trumpling").remove();
+		// });
+	});
 	
 });
