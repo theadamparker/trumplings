@@ -10,6 +10,10 @@ $( document ).ready(function() {
 		$(".trumpling").box2d({'y-velocity':10 , 'shape':'circle'});
 
 		$("#addtrumpling").click(function() {
+			// Math.floor(Math.random() * (max - min + 1)) + min;
+			var randomFace = Math.floor(Math.random() * (2 - 1 + 1)) + 1;
+
+			console.log(randomFace)
 
 			if (babybear.matches) {
 				// window width is less than 500px
@@ -25,7 +29,7 @@ $( document ).ready(function() {
 			}
 			
 
-			$('<img class="trumpling" src="/img/trumpling.png" alt="trumpling" />')
+			$('<img class="trumpling" src="/img/trump-' + randomFace + '.gif" alt="trumpling" />')
 			.appendTo(".steamwrap")
 			.css({ left : randomMargin , width : randomWidth , rotate: randomRotation})
 			.box2d({'y-velocity':10});
