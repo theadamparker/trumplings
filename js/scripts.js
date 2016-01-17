@@ -7,10 +7,11 @@ $( document ).ready(function() {
 
     function introduceTrumplings() {
 
-		$(".trumpling").box2d({'y-velocity':10 , 'shape':'circle'});
+		// $(".trumpling").box2d({'y-velocity':10 , 'shape':'circle'});
+
+		$(".trumpling").box2d({'shape':'circle','density':0.1, 'restitution':0.5, 'friction':0.4, 'y-velocity': 20});
 
 		$("#addtrumpling").click(function() {
-			// Math.floor(Math.random() * (max - min + 1)) + min;
 			var randomFace = Math.floor(Math.random() * (2 - 1 + 1)) + 1;
 
 			console.log(randomFace)
