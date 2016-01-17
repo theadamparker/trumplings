@@ -167,8 +167,15 @@ p {
 }
 
 .ad {
-	margin: 2rem auto 0;
+	position: absolute;
+	bottom: 0;
 	width: 768px;
+	left: 50%;
+	margin-left: -384px;
+
+	@include breakpoint(baby-bear) {
+		display: none !important;
+	}
 }
 
 .controls {
