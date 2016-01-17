@@ -36,7 +36,7 @@ $( document ).ready(function() {
 			.css({ left : randomMargin , width : randomWidth , rotate: randomRotation})
 			.box2d({'y-velocity':10});
 
-			var randomAudio = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
+			var randomAudio = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
 			var soundbyte = "audio" + randomAudio
 
 			var audio = document.getElementById("audio" + randomAudio);
