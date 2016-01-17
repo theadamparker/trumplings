@@ -13,8 +13,6 @@ $( document ).ready(function() {
 			// Math.floor(Math.random() * (max - min + 1)) + min;
 			var randomFace = Math.floor(Math.random() * (2 - 1 + 1)) + 1;
 
-			console.log(randomFace)
-
 			if (babybear.matches) {
 				// window width is less than 500px
 				var randomMargin = Math.floor(90 + (1-5-90)*Math.random()) + "%" ;
@@ -33,6 +31,13 @@ $( document ).ready(function() {
 			.appendTo(".steamwrap")
 			.css({ left : randomMargin , width : randomWidth , rotate: randomRotation})
 			.box2d({'y-velocity':10});
+
+			var randomAudio = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
+			var soundbyte = "audio" + randomAudio
+
+			var audio = document.getElementById("audio" + randomAudio);
+			audio.play();
+			console.log(soundbyte)
 		});
 	}
 
@@ -41,6 +46,17 @@ $( document ).ready(function() {
 		$(".trumpling").hide( "puff" , function() {
 			$(this).remove();
 		});
+
+		var outtahere = document.getElementById("outtahere");
+
+		outtahere.play();
 	});
+
+	// MUTE BUTTON
+	$("#mute").click( function () {
+	    $("audio").prop('muted', !$("audio").prop('muted'));
+	    $(this).find('img').toggle();
+	});
+
 	
 });
