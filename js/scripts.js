@@ -15,7 +15,7 @@ $( document ).ready(function() {
 
 			event.preventDefault();
 
-			var randomFace = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+			var randomFace = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
 
 			if (babybear.matches) {
 				// window width is less than 500px
