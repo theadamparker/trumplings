@@ -2,12 +2,9 @@ $( document ).ready(function() {
 
 	var babybear = window.matchMedia( "(max-width: 500px)" );
 
-	// delay for a moment
-    setTimeout(introduceTrumplings, 1500);
+    setTimeout(introduceTrumplings, 10);
 
     function introduceTrumplings() {
-
-		// $(".trumpling").box2d({'y-velocity':10 , 'shape':'circle'});
 
 		$(".trumpling").box2d({'shape':'circle','density':0.1, 'restitution':0.5, 'friction':0.4, 'y-velocity': 20});
 
