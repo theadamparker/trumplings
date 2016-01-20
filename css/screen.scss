@@ -82,6 +82,26 @@ h1.title {
 	}
 }
 
+.steamer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+
+	img {
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+	}
+
+	.front {
+		z-index: 20;
+	}
+
+	.back {
+		z-index: -1;
+	}
+}
+
 .trumpling {
 	position: absolute;
 	z-index: 5;

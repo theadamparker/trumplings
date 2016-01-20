@@ -2,6 +2,8 @@ $( document ).ready(function() {
 
 	var babybear = window.matchMedia( "(max-width: 500px)" );
 
+	$('.steamer img').on('dragstart', function(event) { event.preventDefault(); });
+
     setTimeout(introduceTrumplings, 10);
 
     function introduceTrumplings() {
