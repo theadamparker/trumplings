@@ -33,14 +33,12 @@ $( document ).ready(function() {
 			$('<img class="trumpling" src="/img/trump-' + randomFace + '.gif" alt="trumpling" />')
 			.appendTo(".steamwrap")
 			.css({ left : randomMargin , width : randomWidth , rotate: randomRotation})
-			.box2d({'y-velocity':10});
+			.box2d({'shape':'circle','density':0.1, 'restitution':0.5, 'friction':0.4, 'y-velocity': 20});
 
 			var randomAudio = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
-			var soundbyte = "audio" + randomAudio
 
 			var audio = document.getElementById("audio" + randomAudio);
 			audio.play();
-			console.log(soundbyte)
 		});
 	}
 
@@ -52,9 +50,43 @@ $( document ).ready(function() {
 			$(this).remove();
 		});
 
+		$(".paling").hide( "puff" , function() {
+			$(this).remove();
+		});
+
 		var outtahere = document.getElementById("outtahere");
 
 		outtahere.play();
+	});
+
+
+	$("#endorse").click(function(event) {
+
+		event.preventDefault();
+
+		if (babybear.matches) {
+			// window width is less than 500px
+			var randomMargin = Math.floor(90 + (1-5-90)*Math.random()) + "%" ;
+			var randomWidth = Math.floor(4 + (1+2-4)*Math.random()) + "rem" ;
+			var randomRotation = Math.floor((-45) + (1+45-(-45))*Math.random()) + "deg" ;
+
+		}
+		else {
+			var randomMargin = Math.floor(95 + (1-5-95)*Math.random()) + "%" ;
+			var randomWidth = Math.floor(5 + (1+3-5)*Math.random()) + "rem" ;
+			var randomRotation = Math.floor((-45) + (1+45-(-45))*Math.random()) + "deg" ;
+		}
+		
+
+		$('<img class="paling" src="/img/palin.png" alt="palin dumpling" />')
+		.appendTo(".steamwrap")
+		.css({ left : randomMargin , width : randomWidth , rotate: randomRotation})
+		.box2d({'shape':'circle','density':0.1, 'restitution':0.5, 'friction':0.4, 'y-velocity': 20});
+
+		var palinAudio = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
+
+		var audio = document.getElementById("palin" + palinAudio);
+		audio.play();
 	});
 
 	// MUTE BUTTON
