@@ -72,12 +72,35 @@ h1.title {
 		overflow: hidden;
 	}
 
+}
+
+.steamer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 50vh;
+
+	img {
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+	}
+
+	.front {
+		z-index: 20;
+		pointer-events: none;
+	}
+
+	.back {
+		z-index: -1;
+	}
+
 	.smoke {
 		position: absolute;
 		width: 100%;
 		height: 550px;
 		background:url('../img/smoke-texture.png') no-repeat;
-		bottom: 150px;
+		bottom: 0;
 		margin-left: 0px;
 	}
 }
