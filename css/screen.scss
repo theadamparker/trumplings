@@ -21,7 +21,7 @@ body {
 	@include breakpoint(baby-bear) {
 		overflow: hidden;
 	}
-	
+
 }
 
 img {
@@ -118,7 +118,7 @@ h1.title {
 	@include breakpoint(baby-bear) {
 		width: 6rem;
 	}
-	
+
 	&#uno {
 		left: 9rem;
 
@@ -185,6 +185,7 @@ h1.title {
 	position: absolute;
 	top: 2rem;
 	left: 2rem;
+	z-index: 10;
 
 	@include breakpoint(baby-bear) {
 		display: none !important;
@@ -259,4 +260,3 @@ p {
 .clearfix {
 	clear: both;
 }
-
