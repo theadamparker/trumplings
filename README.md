@@ -2,7 +2,7 @@
 Trumplings runs on Jekyll via GitHub pages. Feel free to fork and contribute. 
 
 ##Visuals
-The physics is handled with [box2djs](http://box2d-js.sourceforge.net/). That's doing the bulk of the heavy lifting. Sidebar buttons control basic functions to create a new randomized trumpling, with randomized horizontal location. If creating 
+The physics is handled with [box2djs](http://box2d-js.sourceforge.net/). That's doing the bulk of the heavy lifting. Sidebar buttons control basic functions to create a new randomized trumpling, with randomized horizontal location. A randomize javascript function combined with a numerical trumpling file naming allows the randomization of images on click.
 
 ##Audio
 Each sound clip is an independent `audio` element, with a unique ID. Like this:
